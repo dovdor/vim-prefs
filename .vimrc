@@ -114,7 +114,7 @@ set list
 
 set noswapfile
 
-set wildignore=*.swp,*.so,*.pyc,*.class
+set wildignore=*.swp,*.so,*.pyc,*.class,*.sublime*
 
 " Configure ctrlp
 let g:ctrlp_working_path_mode = 'ra'
@@ -136,3 +136,10 @@ au BufWritePost ~/.vimrc so ~/.vimrc
 
 " save changes when :make-ing
 set autowrite
+
+" configure netrw
+let g:netrw_liststyle = 3
+let g:netrw_banner = 0
+let g:netrw_browse_split = 1
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
