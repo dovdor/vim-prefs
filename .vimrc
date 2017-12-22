@@ -117,7 +117,12 @@ set noswapfile
 set wildignore=*.swp,*.so,*.pyc,*.class,*.sublime*
 
 " Configure ctrlp
-let g:ctrlp_working_path_mode = 'ra'
+if !empty($PROJECT_ROOT)
+    let g:ctrlp_working_path_mode = 0
+    nnoremap <Leader>p :<C-U>CtrlP $PROJECT_ROOT<CR>
+else
+    let g:ctrlp_working_path_mode = 'ra'
+endif
 
 let g:NERDSpaceDelims = 1
 let g:NERDCommentEmptyLines = 1
