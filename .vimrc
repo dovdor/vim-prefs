@@ -116,16 +116,30 @@ set noswapfile
 set wildignore=*.swp,*.so,*.pyc,*.class,*.sublime*
 
 " Configure ctrlp
-if !empty($PROJECT_ROOT)
-    let g:ctrlp_working_path_mode = 0
-    nnoremap <Leader>p :<C-U>CtrlP $PROJECT_ROOT<CR>
-else
-    let g:ctrlp_working_path_mode = 'ra'
-endif
+let g:ctrlp_working_path_mode = 'ra'
+" if !empty($PROJECT_ROOT)
+	" let g:ctrlp_working_path_mode = 0
+	" nnoremap <Leader>p :<C-U>CtrlP $PROJECT_ROOT<CR>
+" else
+	" let g:ctrlp_working_path_mode = 'ra'
+" endif
 
+" nerdcommenter
 let g:NERDSpaceDelims = 1
 let g:NERDCommentEmptyLines = 1
 let g:NERDTrimTrailingWhitespace = 1
+
+" Silversearcher (https://gist.github.com/grillermo/3e318d224b1ddcf1bafd)
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
 
 " Disable folding in vim-markdown
 let g:vim_markdown_folding_disabled=1
