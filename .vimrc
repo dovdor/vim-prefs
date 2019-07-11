@@ -168,3 +168,7 @@ let g:netrw_winsize = 25
 " configure line numbers
 set relativenumber
 set number
+
+" remove syntax coloring for large files
+" https://stackoverflow.com/questions/178257/how-to-avoid-syntax-highlighting-for-large-files-in-vim
+autocmd BufWinEnter * if line2byte(line("$") + 1) > 1000000 | syntax clear | endif
