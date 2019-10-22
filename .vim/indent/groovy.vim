@@ -2,6 +2,7 @@
 " Language:	Groovy
 " Maintainer:	Toby Allsopp <toby.allsopp@peace.com> (resigned)
 " Last Change:	2005 Mar 28
+" Origin: https://www.vim.org/scripts/script.php?script_id=2961
 
 " Only load this indent file when no other was loaded.
 if exists("b:did_indent")
