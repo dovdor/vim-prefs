@@ -1,5 +1,6 @@
 set nocompatible
-set backup
+set nobackup
+set nowritebackup
 set history=300
 set ruler
 set showcmd
