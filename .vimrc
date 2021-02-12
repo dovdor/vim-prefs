@@ -17,6 +17,10 @@ Plug 'morhetz/gruvbox'
 " ViM git support
 Plug 'tpope/vim-fugitive'
 
+" fzf setup
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
 call plug#end()
 
 syntax on
@@ -176,3 +180,8 @@ autocmd BufWinEnter * if line2byte(line("$") + 1) > 1000000 | syntax clear | end
 nnoremap <Leader><Right> gt
 nnoremap <Leader><Left> gT
 nnoremap <Leader>b :Black<CR>
+
+" fzf mapping
+" ref: https://dev.to/iggredible/how-to-search-faster-in-vim-with-fzf-vim-36ko
+nnoremap <silent> <C-p> :Files<CR>
+nnoremap <silent> <Leader-f> :Rg<CR>
