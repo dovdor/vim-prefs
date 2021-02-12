@@ -179,6 +179,8 @@ autocmd BufWinEnter * if line2byte(line("$") + 1) > 1000000 | syntax clear | end
 " Tab moves
 nnoremap <Leader><Right> gt
 nnoremap <Leader><Left> gT
+
+" Black
 nnoremap <Leader>b :Black<CR>
 
 " fzf mapping
