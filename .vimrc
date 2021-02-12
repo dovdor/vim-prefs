@@ -175,3 +175,8 @@ set number
 " remove syntax coloring for large files
 " https://stackoverflow.com/questions/178257/how-to-avoid-syntax-highlighting-for-large-files-in-vim
 autocmd BufWinEnter * if line2byte(line("$") + 1) > 1000000 | syntax clear | endif
+
+" Tab moves
+nnoremap <Leader><Right> gt
+nnoremap <Leader><Left> gT
+nnoremap <Leader>b :Black<CR>
