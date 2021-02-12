@@ -1,6 +1,3 @@
-[submodule ".vim/bundle/ctrlp.vim"]
-	path = .vim/bundle/ctrlp.vim
-	url = git@github-personal:ctrlpvim/ctrlp.vim.git
 [submodule ".vim/bundle/nerdcommenter"]
 	path = .vim/bundle/nerdcommenter
 	url = git@github-personal:scrooloose/nerdcommenter.git
