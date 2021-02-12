@@ -9,6 +9,16 @@ set whichwrap+=<,>,[,]
 set incsearch
 set hlsearch
 
+call plug#begin('~/.vim/plugged')
+
+" Theme gruvbox
+Plug 'morhetz/gruvbox'
+
+" ViM git support
+Plug 'tpope/vim-fugitive'
+
+call plug#end()
+
 syntax on
 filetype plugin indent on
 augroup vimrcEx
