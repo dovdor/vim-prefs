@@ -1,6 +1,3 @@
-[submodule ".vim/bundle/ag"]
-	path = .vim/bundle/ag
-	url = git@github-personal:rking/ag.vim
 [submodule ".vim/bundle/ctrlp.vim"]
 	path = .vim/bundle/ctrlp.vim
 	url = git@github-personal:ctrlpvim/ctrlp.vim.git
