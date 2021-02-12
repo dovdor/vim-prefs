@@ -21,6 +21,12 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
+" commenter
+Plug 'preservim/nerdcommenter'
+
+" Black
+Plug 'psf/black', { 'branch': 'stable' }
+
 call plug#end()
 
 syntax on
