@@ -28,6 +28,3 @@
 [submodule ".vim/bundle/terminus"]
 	path = .vim/bundle/terminus
 	url = git@github-personal:wincent/terminus.git
-[submodule ".vim/bundle/gruvbox"]
-	path = .vim/bundle/gruvbox
-	url = git@github-personal:morhetz/gruvbox.git
