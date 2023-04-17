@@ -17,6 +17,7 @@ Plug 'morhetz/gruvbox'
 " ViM git support
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-rhubarb'
 
 " fzf setup
 Plug 'junegunn/fzf.vim'
