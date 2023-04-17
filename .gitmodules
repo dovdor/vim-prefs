@@ -25,9 +25,6 @@
 [submodule ".vim/bundle/vim-markdown"]
 	path = .vim/bundle/vim-markdown
 	url = git@github-personal:plasticboy/vim-markdown.git
-[submodule ".vim/bundle/vim-pathogen"]
-	path = .vim/bundle/vim-pathogen
-	url = git@github-personal:tpope/vim-pathogen.git
 [submodule ".vim/bundle/vim-ps1"]
 	path = .vim/bundle/vim-ps1
 	url = git@github-personal:PProvost/vim-ps1.git
