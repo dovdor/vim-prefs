@@ -9,10 +9,6 @@ set whichwrap+=<,>,[,]
 set incsearch
 set hlsearch
 
-" Pathogen
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect()
-
 syntax on
 filetype plugin indent on
 augroup vimrcEx
