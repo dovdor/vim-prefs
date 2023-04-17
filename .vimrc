@@ -97,16 +97,6 @@ cnoreabbrev csr cs reset
 cnoreabbrev css cs show
 cnoreabbrev csh cs help
 
-" Set Find to find in files
-" Disabled: Using csf f for a while
-" command! -nargs=1 csff csf f <args>
-
-function! EnableCscopeConnection( project )
-    let _cscope_db = "~/Projects/envs/" . a:project . "/db"
-    silent exec "cs add " . _cscope_db
-    unlet _cscope_db
-endfunction
-
 " Push .class files to the end of the file completion list
 set suffixes+=.class
 
@@ -141,21 +131,14 @@ let g:NERDTrimTrailingWhitespace = 1
 if executable('ag')
   " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
 endif
-
-let g:ctrlp_max_files = 0
 
 " Disable folding in vim-markdown
 let g:vim_markdown_folding_disabled=1
 
 nnoremap <silent> <Leader>md :silent !preview-markdown.sh % /tmp/%.html<CR>
 
+" Set line marker
 hi ColorColumn ctermbg=DarkRed guibg=DarkRed
 set colorcolumn=100
 
