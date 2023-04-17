@@ -24,7 +24,7 @@ autocmd BufReadPost *
 
 augroup END
 
-" Trying a new thing
+" Do not use the system clipboard
 " set clipboard=unnamed
 set softtabstop=4
 set shiftwidth=4
