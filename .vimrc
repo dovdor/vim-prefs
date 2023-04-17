@@ -31,7 +31,7 @@ set shiftwidth=4
 set nowrap
 
 set background=dark
-colorscheme solarized
+colorscheme gruvbox
 set printoptions=number:y,duplex:long
 set printexpr=system('open\ -a\ Preview\ '.v:fname_in)\ +\ v:shell_error
 
