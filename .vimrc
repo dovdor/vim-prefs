@@ -101,11 +101,10 @@ set statusline=%f%r%m\ %{fugitive#statusline()}%=%l/%L\ %c
 set ignorecase
 set smartcase
 
-" Cmd-n
-map <C-n> :Explore<CR>
+" noh - ctrl-l
 nnoremap <silent> <C-l> :noh<CR>
-nnoremap <Leader>g :Ag 
 
+" allow exrc
 set exrc
 set secure
 
