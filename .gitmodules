@@ -13,9 +13,6 @@
 [submodule ".vim/bundle/vim-csharp"]
 	path = .vim/bundle/vim-csharp
 	url = git@github-personal:OrangeT/vim-csharp.git
-[submodule ".vim/bundle/vim-fugitive"]
-	path = .vim/bundle/vim-fugitive
-	url = git@github-personal:tpope/vim-fugitive.git
 [submodule ".vim/bundle/vim-markdown"]
 	path = .vim/bundle/vim-markdown
 	url = git@github-personal:plasticboy/vim-markdown.git
