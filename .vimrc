@@ -30,6 +30,9 @@ Plug 'psf/black', { 'branch': 'stable' }
 
 " Jinja2
 Plug 'glench/vim-jinja2-syntax'
+
+" TF
+Plug 'hashivim/vim-terraform'
 call plug#end()
 
 syntax on
