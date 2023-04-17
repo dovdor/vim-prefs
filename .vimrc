@@ -27,7 +27,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'preservim/nerdcommenter'
 
 " Black
-Plug 'psf/black', { 'branch': 'stable' }
+Plug 'psf/black', { 'tag': 'stable' }
 
 " Jinja2
 Plug 'glench/vim-jinja2-syntax'
