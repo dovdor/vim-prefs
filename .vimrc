@@ -133,3 +133,6 @@ set colorcolumn=100
 
 " automatically reload vimrc when it's saved
 au BufWritePost ~/.vimrc so ~/.vimrc
+
+" save changes when :make-ing
+set autowrite
