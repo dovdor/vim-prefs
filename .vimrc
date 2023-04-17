@@ -130,3 +130,6 @@ nnoremap <silent> <Leader>md :silent !preview-markdown.sh % /tmp/%.html<CR>
 
 hi ColorColumn ctermbg=DarkRed guibg=DarkRed
 set colorcolumn=100
+
+" automatically reload vimrc when it's saved
+au BufWritePost ~/.vimrc so ~/.vimrc
