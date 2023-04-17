@@ -16,6 +16,7 @@ Plug 'morhetz/gruvbox'
 
 " ViM git support
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-eunuch'
 
 " fzf setup
 Plug 'junegunn/fzf.vim'
@@ -27,6 +28,8 @@ Plug 'preservim/nerdcommenter'
 " Black
 Plug 'psf/black', { 'branch': 'stable' }
 
+" Jinja2
+Plug 'glench/vim-jinja2-syntax'
 call plug#end()
 
 syntax on
