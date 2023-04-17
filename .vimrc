@@ -143,6 +143,8 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
+let g:ctrlp_max_files = 0
+
 " Disable folding in vim-markdown
 let g:vim_markdown_folding_disabled=1
 
