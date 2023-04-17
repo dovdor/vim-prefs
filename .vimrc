@@ -1,12 +1,16 @@
 set nocompatible
 set backup
-set history=3000
+set history=300
 set ruler
 set showcmd
 set backspace=indent,eol,start
 set whichwrap+=<,>,[,]
 set incsearch
 set hlsearch
+
+" Pathogen
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
 
 syntax on
 filetype plugin indent on
@@ -20,12 +24,17 @@ autocmd BufReadPost *
 
 augroup END
 
+" Trying a new thing
+" set clipboard=unnamed
 set softtabstop=4
 set shiftwidth=4
 set nowrap
 
+set background=dark
+colorscheme solarized
 set printoptions=number:y,duplex:long
 set printexpr=system('open\ -a\ Preview\ '.v:fname_in)\ +\ v:shell_error
+
 
 function! ChangeCurrentDir()
     let _dir_notescaped = expand("%:p:h")
@@ -53,6 +62,34 @@ set wildmode=longest,list,full
 set spellfile=~/.vimspelladdition.add
 set spelllang=en_us
 
+" remap ± and § to ~ and ` respectively
+" Using KeyRemap4MacBook/Karabiner
+"map! § `
+"map! ± ~
+"map § `
+"map ± ~
+
+" Enable Cscope
+set cscopetag
+set cscopeverbose
+set cscopequickfix=s-,c-,d-,i-,t-,e-
+cnoreabbrev csa cs add
+cnoreabbrev csf cs find
+cnoreabbrev csk cs kill
+cnoreabbrev csr cs reset
+cnoreabbrev css cs show
+cnoreabbrev csh cs help
+
+" Set Find to find in files
+" Disabled: Using csf f for a while
+" command! -nargs=1 csff csf f <args>
+
+function! EnableCscopeConnection( project )
+    let _cscope_db = "~/Projects/envs/" . a:project . "/db"
+    silent exec "cs add " . _cscope_db
+    unlet _cscope_db
+endfunction
+
 " Push .class files to the end of the file completion list
 set suffixes+=.class
 
@@ -67,6 +104,7 @@ set smartcase
 " Cmd-n
 map <C-n> :Explore<CR>
 nnoremap <silent> <C-l> :noh<CR>
+nnoremap <Leader>g :Ag 
 
 set exrc
 set secure
@@ -77,6 +115,18 @@ set list
 set noswapfile
 
 set wildignore=*.swp,*.so,*.pyc,*.class
+
+" Configure ctrlp
+let g:ctrlp_working_path_mode = 'ra'
+
+let g:NERDSpaceDelims = 1
+let g:NERDCommentEmptyLines = 1
+let g:NERDTrimTrailingWhitespace = 1
+
+" Disable folding in vim-markdown
+let g:vim_markdown_folding_disabled=1
+
+nnoremap <silent> <Leader>md :silent !preview-markdown.sh % /tmp/%.html<CR>
 
 hi ColorColumn ctermbg=DarkRed guibg=DarkRed
 set colorcolumn=100
