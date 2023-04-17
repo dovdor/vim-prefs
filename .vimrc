@@ -130,12 +130,6 @@ let g:NERDSpaceDelims = 1
 let g:NERDCommentEmptyLines = 1
 let g:NERDTrimTrailingWhitespace = 1
 
-" Silversearcher (https://gist.github.com/grillermo/3e318d224b1ddcf1bafd)
-if executable('ag')
-  " Use ag over grep
-  set grepprg=ag\ --nogroup\ --nocolor
-endif
-
 " Disable folding in vim-markdown
 let g:vim_markdown_folding_disabled=1
 
@@ -177,5 +171,23 @@ nnoremap <Leader>b :Black<CR>
 
 " fzf mapping
 " ref: https://dev.to/iggredible/how-to-search-faster-in-vim-with-fzf-vim-36ko
-nnoremap <silent> <C-p> :Files<CR>
-nnoremap <silent> <Leader-f> :Rg<CR>
+let g:fzf_preview_window = ['up:50%', 'ctrl-/']
+nnoremap <silent> <C-p> :Files ~/Projects<CR>
+nnoremap <silent> <Leader>f :Rg<CR>
+
+" Silversearcher (https://gist.github.com/grillermo/3e318d224b1ddcf1bafd)
+" if executable('ag')
+  " " Use ag over grep
+  " set grepprg=ag\ --nogroup\ --nocolor
+" endif
+" Use rg over default grep
+" https://dev.to/iggredible/how-to-search-faster-in-vim-with-fzf-vim-36ko
+if executable('rg')
+    set grepprg=rg\ --vimgrep\ --smart-case\ --follow
+endif
+
+" ref: https://vim.fandom.com/wiki/Copy_filename_to_clipboard
+" copy filename, path, folder into clipboard
+nmap ,cs :let @*=expand("%")<CR>
+nmap ,cl :let @*=expand("%:p")<CR>
+nmap ,cp :let @*=expand("%:p:h')<CR>
