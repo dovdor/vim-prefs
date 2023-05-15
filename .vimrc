@@ -37,6 +37,7 @@ Plug 'hashivim/vim-terraform'
 
 " vim-ai
 Plug 'madox2/vim-ai'
+
 call plug#end()
 
 syntax on
