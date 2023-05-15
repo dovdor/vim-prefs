@@ -60,6 +60,10 @@ set nowrap
 
 set background=dark
 colorscheme gruvbox
+" Customize spelling mistakes with underline only
+highlight SpellBad ctermfg=NONE ctermbg=NONE cterm=underline
+
+" Define printing options
 set printoptions=number:y,duplex:long
 set printexpr=system('open\ -a\ Preview\ '.v:fname_in)\ +\ v:shell_error
 
